@@ -1,6 +1,6 @@
 return {
   name = "creationix/simple-http-server",
-  version = "0.0.2",
+  version = "0.0.3",
   description = "A simple luvi app that creates a local http server using weblit",
   tags = {"weblit","http-server","app","static"},
   homepage = "https://github.com/creationix/simple-http-server",
@@ -18,6 +18,7 @@ return {
     "creationix/weblit-auto-headers",
     "creationix/weblit-etag-cache",
     "creationix/weblit-static",
+    "creationix/pathjoin",
     "luvit/json",
   }
 }
