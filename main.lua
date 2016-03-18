@@ -10,9 +10,9 @@ local pathJoin = require('pathjoin').pathJoin
 local meta = require('./package')
 
 print(meta.name .. ' v' .. meta.version)
-local root, port = ...
+local root, port, host = ...
 if not root then
-  print("Usage:\n\tsimple-http-server path [port]")
+  print("Usage:\n\tsimple-http-server path [port] [host]")
   return -1
 end
 if root:sub(1,1) ~= "/" then
@@ -25,6 +25,7 @@ print("Root path: " .. root)
 require('weblit-app')
 
   .bind {
+    host = host,
     port = port
   }
 
