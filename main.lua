@@ -33,6 +33,8 @@ require('weblit-app')
   .use(require('weblit-auto-headers'))
   .use(require('weblit-etag-cache'))
 
+  .use(require('weblit-cors'))
+
   .use(require('weblit-static')(root))
 
   .start()
